@@ -12,3 +12,7 @@ Checks to see if a specific rpm package is installed. It returns a 1 or a 0.
 createRaid5lvm.sh
 
 Creates a Raid5 logical volume.
+
+recoverRAID5lvm.sh
+
+Recovers a Raid5 logical volume.
