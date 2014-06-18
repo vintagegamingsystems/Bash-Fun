@@ -1,0 +1,11 @@
+create-Recover-RAID5-LVM-Scripts
+
+The initRAIDLVM.sh script creates a RAID5 Logical Volume.
+
+The devices are hardcoded into the script. I will attempt to create a script that will prompt for user input.
+
+The recoverRAID5LVM.sh script restores a RAID5 Logical Volume.
+
+It is currently has device "/dev/sde" hard coded as the recovered drive.
+
+Both scripts are a work in progress. They can be easily modified to fit specific devices within your environment. 
