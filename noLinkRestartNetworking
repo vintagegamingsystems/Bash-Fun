@@ -1,0 +1,16 @@
+#!/bin/bash
+
+interface="wlan0"
+stateStatus="state UP"
+testSite="www.google.com"
+logDir="/var/log/noLinkRestartNetworking/log"
+
+# Checks to see if the network link is up and can ping www.google.com.
+# If it cannot it will log the event and restart the networking service. 
+
+if ! ip link show | grep "$interface" | grep -q "$statStatus" \
+        && ping -c 1 "$testSite" | grep -q "1 received" ; 
+        then
+        echo "$(date) Not online. Restarting networking service." >> $logDir
+        systemctl restart networking
+fi
